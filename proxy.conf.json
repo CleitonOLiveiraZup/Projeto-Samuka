@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target": "https://control-food-api.herokuapp.com/products",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

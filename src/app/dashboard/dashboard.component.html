@@ -1,0 +1,19 @@
+<div class="container-fluid page">
+  <div class="d-flex page__box p-3 mt-2">Produtos</div>
+  <div class="page__content shadow p-3 position-relative">
+    <div class="page__content-data position-absolute text-center">
+      <ul class="flex-box-historic__list">
+        <li *ngFor="let coupon of list" class="flex-box-historic__line">
+          <div>
+            <span>Código do cupom: {{coupon.costValue}}</span>
+            <p>{{coupon.name}}</p>
+          </div>
+          <!-- <div>
+            <span><img src="../../../../assets/icon/price.svg" alt="" />{{coupon.value |
+              currency: 'BRL' :true:'1.2-2'}}</span>
+          </div> -->
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
