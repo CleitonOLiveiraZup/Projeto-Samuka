@@ -28,6 +28,8 @@ import { ProductRead2Component } from './components/product/product-read2/produc
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MatSelectModule } from '@angular/material/select';
+
 import { RedDirective } from './directives/red.directive';
 
 import localePt from '@angular/common/locales/pt';
@@ -75,6 +77,7 @@ registerLocaleData(localePt);
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
+    MatSelectModule,
     MatCardModule,
     MatButtonModule,
     MatSnackBarModule,

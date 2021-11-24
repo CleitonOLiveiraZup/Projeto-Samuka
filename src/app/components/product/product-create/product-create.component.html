@@ -19,8 +19,7 @@
             </div>
         </mat-form-field>
     </form>
-
-    <button mat-raised-button (click)="createProduct()" color="primary">
+    <button mat-raised-button [disabled]="stoc.invalid" (click)="createProduct()" color="primary">
         Salvar
     </button>
 
