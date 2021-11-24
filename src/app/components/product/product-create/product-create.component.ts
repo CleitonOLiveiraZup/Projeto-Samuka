@@ -40,19 +40,18 @@ export class ProductCreateComponent implements OnInit {
     }));
   }
 
-  transformCommercialConditions() {
-    const commercialConditions = this.form.getRawValue();
-    commercialConditions.saleValue = Number(commercialConditions.saleValue);
-    return commercialConditions;
+  transformProducts() {
+    const formProducts = this.form.getRawValue();
+    formProducts.saleValue = Number(formProducts.saleValue);
+    return formProducts;
   }
 
   createProduct() {
-    const commercialConditions = this.transformCommercialConditions();
-    this.productService.create(commercialConditions).subscribe(() => {
+    const formProducts = this.transformProducts();
+    this.productService.create(formProducts).subscribe(() => {
       this.productService.showMessage('Produto criado!');
       this.router.navigate(['/products']);
     });
-    console.log(commercialConditions);
   }
 
   cancel(): void {
