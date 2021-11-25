@@ -38,7 +38,4 @@ export class ProductReadComponent implements OnInit {
       this.sto = product.Stocks;
     });
   }
-  teste() {
-    console.log(this.sto);
-  }
 }
