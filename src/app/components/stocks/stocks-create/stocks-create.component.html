@@ -5,7 +5,8 @@
       <input matInput placeholder="Nome" formControlName="name">
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Valor de venda" formControlName="value">
+      <input matInput placeholder="Valor de venda" mask="separator.2" thousandSeparator="." maxlength="20"
+        decimalMarker="," prefix="R$ " formControlName="value">
     </mat-form-field>
   </form>
 

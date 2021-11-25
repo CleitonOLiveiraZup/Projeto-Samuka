@@ -37,12 +37,16 @@ import { registerLocaleData } from '@angular/common';
 import { ForDirective } from './directives/for.directive';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
+import { MatRadioModule } from '@angular/material/radio';
+import { NgxMaskModule } from 'ngx-mask';
 import { StocksCreateComponent } from './components/stocks/stocks-create/stocks-create.component';
 import { StocksReadComponent } from './components/stocks/stocks-read/stocks-read.component';
 import { StocksDeleteComponent } from './components/stocks/stocks-delete/stocks-delete.component';
 import { StocksUpdateComponent } from './components/stocks/stocks-update/stocks-update.component';
 import { StocksCrudComponent } from './views/stocks-crud/stocks-crud.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { ProductDiscountComponent } from './components/product/product-discount/product-discount.component';
+import { BlankslateDataComponent } from './view/blankslate-data/blankslate-data.component';
 
 registerLocaleData(localePt);
 
@@ -67,6 +71,7 @@ registerLocaleData(localePt);
     StocksUpdateComponent,
     StocksCrudComponent,
     ProductDiscountComponent,
+    BlankslateDataComponent,
   ],
   imports: [
     BrowserModule,
@@ -83,11 +88,14 @@ registerLocaleData(localePt);
     MatSnackBarModule,
     HttpClientModule,
     FormsModule,
+    MatRadioModule,
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
+    MatProgressBarModule,
     MatPaginatorModule,
     MatSortModule,
+    NgxMaskModule.forRoot(),
   ],
   providers: [
     {

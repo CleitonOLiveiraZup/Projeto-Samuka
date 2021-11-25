@@ -13,7 +13,7 @@ export class ProductUpdateComponent implements OnInit {
   form: FormGroup;
   stoc: FormGroup;
   product: Content;
-  stock: Stocks[];
+  sto: Stocks[];
   public userId;
 
   constructor(
@@ -30,8 +30,13 @@ export class ProductUpdateComponent implements OnInit {
     const id = this.userId;
     this.productService.readById(id).subscribe((product: any) => {
       this.product = product;
+      this.sto = product.stocks;
       this.patchFormValue(this.product);
     });
+  }
+
+  teste() {
+    console.log(this.sto);
   }
 
   createForm() {
