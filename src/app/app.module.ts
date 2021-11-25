@@ -46,7 +46,6 @@ import { StocksUpdateComponent } from './components/stocks/stocks-update/stocks-
 import { StocksCrudComponent } from './views/stocks-crud/stocks-crud.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { ProductDiscountComponent } from './components/product/product-discount/product-discount.component';
-import { BlankslateDataComponent } from './view/blankslate-data/blankslate-data.component';
 
 registerLocaleData(localePt);
 
@@ -71,7 +70,6 @@ registerLocaleData(localePt);
     StocksUpdateComponent,
     StocksCrudComponent,
     ProductDiscountComponent,
-    BlankslateDataComponent,
   ],
   imports: [
     BrowserModule,
