@@ -12,10 +12,12 @@ import { ProductService } from '../product.service';
 export class ProductDiscountComponent implements OnInit {
   public userId;
   product: Discount;
-  teste: Content[];
+  teste: number;
+  sValue: number;
+
   sto: Content[];
 
-  displayedColumns = ['Nome', 'Valor de Venda'];
+  displayedColumns = ['Nome', 'Valor'];
 
   constructor(
     private productService: ProductService,
@@ -36,9 +38,8 @@ export class ProductDiscountComponent implements OnInit {
     const id = this.userId;
     this.productService.readById(id).subscribe((psto: any) => {
       this.sto = psto.stocks;
-    });
-    this.productService.readById(id).subscribe((pssto: any) => {
-      this.teste = pssto.amountStocks;
+      this.teste = psto.amountStocks;
+      this.sValue = psto.saleValue;
     });
   }
 

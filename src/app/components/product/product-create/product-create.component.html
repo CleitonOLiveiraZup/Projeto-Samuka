@@ -2,11 +2,10 @@
     <mat-card-title>Novo Produto</mat-card-title>
     <form [formGroup]="form">
         <mat-form-field>
-            <input matInput placeholder="Nome" formControlName="name">
-
+            <input matInput placeholder="Nome" type="text" maxlength="100" formControlName="name">
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Descrição" formControlName="describe">
+            <input matInput placeholder="Descrição" type="text" maxlength="100" formControlName="describe">
         </mat-form-field>
         <mat-form-field>
             <input matInput placeholder="Valor de venda" mask="separator.2" thousandSeparator="." maxlength="20"

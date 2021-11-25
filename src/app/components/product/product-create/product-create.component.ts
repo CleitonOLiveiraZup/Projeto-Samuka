@@ -39,12 +39,6 @@ export class ProductCreateComponent implements OnInit {
     });
   }
 
-  initId() {
-    return (this.stoc = this.formBuilder.group({
-      id: [null, Validators.required],
-    }));
-  }
-
   transformProducts() {
     const formProducts = this.form.getRawValue();
     formProducts.saleValue = Number(formProducts.saleValue);
